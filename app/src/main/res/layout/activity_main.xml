@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Добавление данных"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/resultSpiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:minWidth="250dp"
+        app:layout_constraintEnd_toEndOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Spinner
+        android:id="@+id/diffSpiner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:minWidth="250dp"
+        app:layout_constraintEnd_toEndOf="@+id/resultSpiner"
+        app:layout_constraintStart_toStartOf="@+id/resultSpiner"
+        app:layout_constraintTop_toBottomOf="@+id/resultSpiner" />
+
+    <EditText
+        android:id="@+id/edMistake"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:ems="10"
+        android:hint="количество ошибок"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/diffSpiner"
+        app:layout_constraintStart_toStartOf="@+id/diffSpiner"
+        app:layout_constraintTop_toBottomOf="@+id/diffSpiner" />
+
+    <EditText
+        android:id="@+id/edPoint"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:ems="10"
+        android:hint="количество очков"
+        android:inputType="number"
+        app:layout_constraintEnd_toEndOf="@+id/edMistake"
+        app:layout_constraintHorizontal_bias="0.475"
+        app:layout_constraintStart_toStartOf="@+id/edMistake"
+        app:layout_constraintTop_toBottomOf="@+id/edMistake" />
+
+    <Button
+        android:id="@+id/btAllData"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="Вывести все записи"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btSave"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="Записать в базу данных"
+        app:layout_constraintBottom_toTopOf="@+id/btAllData"
+        app:layout_constraintEnd_toEndOf="@+id/btAllData"
+        app:layout_constraintStart_toStartOf="@+id/btAllData" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
